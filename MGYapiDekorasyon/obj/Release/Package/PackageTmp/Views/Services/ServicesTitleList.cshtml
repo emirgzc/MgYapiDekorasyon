@@ -1,0 +1,7 @@
+﻿
+@model IEnumerable<EntityLayer.Concrete.Services>
+
+@foreach (var item in Model)
+{
+	<li><a href="/Services/ServicesDetails/@item.ServicesId">@item.ServiceTitle</a></li>
+}

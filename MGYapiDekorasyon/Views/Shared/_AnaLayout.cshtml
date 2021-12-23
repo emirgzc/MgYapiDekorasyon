@@ -1,0 +1,131 @@
+﻿
+@{
+	ViewBag.Title = "_AnaLayout";
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+	<!-- Basic Page Needs
+	================================================== -->
+	<meta charset="utf-8">
+	<title>MG Yapı ve Dekorasyon</title>
+
+	<!-- Mobile Specific Metas
+	================================================== -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="MG Yapı ve Dekorasyon">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+	<!-- Favicon
+	================================================== -->
+	<link rel="icon" type="image/png" href="~/constra/images/arkasiz2.png">
+
+	<!-- CSS
+	================================================== -->
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="~/constra/plugins/bootstrap/bootstrap.min.css">
+	<!-- FontAwesome -->
+	<link rel="stylesheet" href="~/constra/plugins/fontawesome/css/all.min.css">
+	<!-- Animation -->
+	<link rel="stylesheet" href="~/constra/plugins/animate-css/animate.css">
+	<!-- slick Carousel -->
+	<link rel="stylesheet" href="~/constra/plugins/slick/slick.css">
+	<link rel="stylesheet" href="~/constra/plugins/slick/slick-theme.css">
+	<!-- Colorbox -->
+	<link rel="stylesheet" href="~/constra/plugins/colorbox/colorbox.css">
+	<!-- Template styles-->
+	<link rel="stylesheet" href="~/constra/css/style.css">
+
+</head>
+<body>
+	<div class="body-inner">
+
+		@Html.Action("TopBar","Ana")
+		<!--/ Topbar end -->
+		<!-- Header start -->
+		<header id="header" class="header-two">
+			<div class="site-navigation">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<nav class="navbar navbar-expand-lg navbar-light p-0">
+
+								<div class="logo">
+									<a class="d-block" href="/Ana/Index/">
+										<img loading="lazy" src="~/constra/images/arkasiz2.png" alt="MG YAPI VE DEKORASYON" style="width:55px; height:52px;">MG Yapı ve Dekorasyon
+									</a>
+								</div><!-- logo end -->
+
+								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+									<span class="navbar-toggler-icon"></span>
+								</button>
+
+								<div id="navbar-collapse" class="collapse navbar-collapse">
+									<ul class="nav navbar-nav ml-auto align-items-center">
+										<li class="nav-item dropdown">
+											<a href="/Ana/Index/" class="nav-link dropdown-toggle">Anasayfa </a>
+										</li>
+
+										<li class="nav-item dropdown">
+											<a href="/About/AboutIndex/" class="nav-link dropdown-toggle">Hakkımızda</a>
+
+										</li>
+
+										<li class="nav-item dropdown">
+											<a href="/Project/ProjectIndex/" class="nav-link dropdown-toggle">Projeler </a>
+										</li>
+
+										<li class="nav-item dropdown">
+											<a href="/Services/ServicesIndex/" class="nav-link dropdown-toggle" >Hizmetlerimiz </a>
+										</li>
+
+										<li class="nav-item"><a class="nav-link" href="/Contact/Index/">İletişim</a></li>
+
+										<li class="header-get-a-quote">
+											<a class="btn btn-primary" href="/Contact/Index/">Bize Ulaşın</a>
+										</li>
+									</ul>
+								</div>
+							</nav>
+						</div>
+						<!--/ Col end -->
+					</div>
+					<!--/ Row end -->
+				</div>
+				<!--/ Container end -->
+
+			</div>
+			<!--/ Navigation end -->
+		</header>
+		<!--/ Header end -->
+
+		@RenderBody()
+
+		<!-- initialize jQuery Library -->
+		<script src="~/constra/plugins/jQuery/jquery.min.js"></script>
+		<!-- Bootstrap jQuery -->
+		<script src="~/constra/plugins/bootstrap/bootstrap.min.js" defer></script>
+		<!-- Slick Carousel -->
+		<script src="~/constra/plugins/slick/slick.min.js"></script>
+		<script src="~/constra/plugins/slick/slick-animation.min.js"></script>
+		<!-- Color box -->
+		<script src="~/constra/plugins/colorbox/jquery.colorbox.js"></script>
+		<!-- shuffle -->
+		<script src="~/constra/plugins/shuffle/shuffle.min.js" defer></script>
+
+
+		<!-- Google Map API Key-->
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
+		<!-- Google Map Plugin-->
+		<script src="~/constra/plugins/google-map/map.js" defer></script>
+
+		<!-- Template custom -->
+		<script src="~/constra/js/script.js"></script>
+
+	</div><!-- Body inner end -->
+</body>
+
+</html>
+

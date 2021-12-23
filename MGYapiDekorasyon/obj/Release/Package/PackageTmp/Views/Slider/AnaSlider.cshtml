@@ -1,0 +1,23 @@
+﻿
+@model IEnumerable<EntityLayer.Concrete.Slider>
+
+<div class="banner-carousel banner-carousel-2 mb-0">
+	@foreach (var item in Model)
+	{
+		<div class="banner-carousel-item" style="background-image:url(@item.Image)">
+			<div class="container">
+				<div class="box-slider-content">
+					<div class="box-slider-text">
+						<h3 class="box-slide-sub-title">@item.Title</h3>
+						<p class="box-slide-description">@item.Desc</p>
+						<p>
+							<a href="/@item.ButonWay/Index/" class="slider btn btn-primary">@item.ButonTitle</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	}
+</div>
+
+

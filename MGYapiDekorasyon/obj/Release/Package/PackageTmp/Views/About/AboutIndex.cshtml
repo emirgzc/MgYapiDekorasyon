@@ -1,0 +1,91 @@
+﻿
+@model IEnumerable<EntityLayer.Concrete.About>
+
+@{
+	ViewBag.Title = "AboutIndex";
+	Layout = "~/Views/Shared/_AnaLayout.cshtml";
+}
+
+<div id="banner-area" class="banner-area" style="background-image: url(/constra/images/mehmet/icerik4.jpeg)">
+	<div class="banner-text">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="banner-heading">
+						<h1 class="banner-title">Hakkımızda</h1>
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb justify-content-center">
+								<li class="breadcrumb-item"><a href="/Ana/Index/">Anasayfa</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Hakkımızda</li>
+							</ol>
+						</nav>
+					</div>
+				</div><!-- Col end -->
+			</div><!-- Row end -->
+		</div><!-- Container end -->
+	</div><!-- Banner text end -->
+</div><!-- Banner area end -->
+
+<section id="main-container" class="main-container">
+	<div class="container">
+		<div class="row">
+			@foreach (var item in Model)
+			{
+				<div class="col-lg-6">
+					<h3 class="column-title">@item.MissionTitle</h3>
+					<p>@item.MissionDesc</p>
+
+				</div>
+				<div class="col-lg-6">
+					<h3 class="column-title">@item.VisionTitle</h3>
+					<p>@item.VisionDesc</p>
+
+				</div>
+			}
+		</div><!-- Content row end -->
+
+	</div><!-- Container end -->
+</section>
+
+<section id="facts" class="facts-area dark-bg">
+	<div class="container">
+		<div class="facts-wrapper">
+			<div class="row">
+				<div class="col-md-4 col-sm-6 ts-facts">
+					<div class="ts-facts-img">
+						<img loading="lazy" src="~/constra/images/icon-image/fact1.png" alt="facts-img">
+					</div>
+					<div class="ts-facts-content">
+						<h2 class="ts-facts-num"><span class="counterUp" data-count="100">0</span>+</h2>
+						<h3 class="ts-facts-title">Biten Projeler</h3>
+					</div>
+				</div><!-- Col end -->
+
+				<div class="col-md-4 col-sm-6 ts-facts mt-5 mt-sm-0">
+					<div class="ts-facts-img">
+						<img loading="lazy" src="~/constra/images/icon-image/fact2.png" alt="facts-img">
+					</div>
+					<div class="ts-facts-content">
+						<h2 class="ts-facts-num"><span class="counterUp" data-count="100">0</span>+</h2>
+						<h3 class="ts-facts-title">Müşteri Memnuniyeti</h3>
+					</div>
+				</div><!-- Col end -->
+
+				<div class="col-md-4 col-sm-6 ts-facts mt-5 mt-md-0">
+					<div class="ts-facts-img">
+						<img loading="lazy" src="~/constra/images/icon-image/fact3.png" alt="facts-img">
+					</div>
+					<div class="ts-facts-content">
+						<h2 class="ts-facts-num"><span class="counterUp" data-count="100">0</span>+</h2>
+						<h3 class="ts-facts-title">İş Tecrübesi</h3>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		
+	</div>
+	
+</section>
+
+@Html.Action("Footer", "Ana")

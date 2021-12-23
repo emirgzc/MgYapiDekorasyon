@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{23FABDFA-A21A-4CDB-AC47-429B9E921881}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MGYapiDekorasyon</RootNamespace>
+    <AssemblyName>MGYapiDekorasyon</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44375</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AnaController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\ProjectController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
+    <Compile Include="Controllers\SliderController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="constra\404.html" />
+    <Content Include="constra\about.html" />
+    <Content Include="constra\contact.html" />
+    <Content Include="constra\css\style.css" />
+    <Content Include="constra\faq.html" />
+    <Content Include="constra\images\arkasiz.png" />
+    <Content Include="constra\images\arkasiz2.png" />
+    <Content Include="constra\images\banner\banner1.jpg" />
+    <Content Include="constra\images\banner\banner2.jpg" />
+    <Content Include="constra\images\banner\banner3.jpg" />
+    <Content Include="constra\images\clients\client1.png" />
+    <Content Include="constra\images\clients\client2.png" />
+    <Content Include="constra\images\clients\client3.png" />
+    <Content Include="constra\images\clients\client4.png" />
+    <Content Include="constra\images\clients\client5.png" />
+    <Content Include="constra\images\clients\client6.png" />
+    <Content Include="constra\images\clients\testimonial1.png" />
+    <Content Include="constra\images\clients\testimonial2.png" />
+    <Content Include="constra\images\clients\testimonial3.png" />
+    <Content Include="constra\images\crossword.png" />
+    <Content Include="constra\images\favicon.png" />
+    <Content Include="constra\images\footer-logo.png" />
+    <Content Include="constra\images\icon-image\fact1.png" />
+    <Content Include="constra\images\icon-image\fact2.png" />
+    <Content Include="constra\images\icon-image\fact3.png" />
+    <Content Include="constra\images\icon-image\fact4.png" />
+    <Content Include="constra\images\icon-image\service-icon1.png" />
+    <Content Include="constra\images\icon-image\service-icon2.png" />
+    <Content Include="constra\images\icon-image\service-icon3.png" />
+    <Content Include="constra\images\icon-image\service-icon4.png" />
+    <Content Include="constra\images\icon-image\service-icon5.png" />
+    <Content Include="constra\images\icon-image\service-icon6.png" />
+    <Content Include="constra\images\logo.png" />
+    <Content Include="constra\images\marker.png" />
+    <Content Include="constra\images\mehmet\ana2.jpeg" />
+    <Content Include="constra\images\mehmet\ana3.jpeg" />
+    <Content Include="constra\images\mehmet\anasayfa1.jpeg" />
+    <Content Include="constra\images\mehmet\anasayfa2.jpeg" />
+    <Content Include="constra\images\mehmet\anasayfa4.jpeg" />
+    <Content Include="constra\images\mehmet\arka22.jpeg" />
+    <Content Include="constra\images\mehmet\ev1.jpeg" />
+    <Content Include="constra\images\mehmet\ev2.jpeg" />
+    <Content Include="constra\images\mehmet\foto11.jpeg" />
+    <Content Include="constra\images\mehmet\foto18.jpeg" />
+    <Content Include="constra\images\mehmet\foto19.jpeg" />
+    <Content Include="constra\images\mehmet\foto20.jpeg" />
+    <Content Include="constra\images\mehmet\foto25.jpeg" />
+    <Content Include="constra\images\mehmet\foto4.jpeg" />
+    <Content Include="constra\images\mehmet\foto6.jpeg" />
+    <Content Include="constra\images\mehmet\icerik1.jpeg" />
+    <Content Include="constra\images\mehmet\icerik2.jpeg" />
+    <Content Include="constra\images\mehmet\icerik3.jpeg" />
+    <Content Include="constra\images\mehmet\icerik4.jpeg" />
+    <Content Include="constra\images\mehmet\icerik5.jpeg" />
+    <Content Include="constra\images\mehmet\icerik7.jpeg" />
+    <Content Include="constra\images\mehmet\icerik8.jpeg" />
+    <Content Include="constra\images\mehmet\icerik9.jpeg" />
+    <Content Include="constra\images\mehmet\mem2.jpeg" />
+    <Content Include="constra\images\mgyapi2.jpg" />
+    <Content Include="constra\images\news\avator1.png" />
+    <Content Include="constra\images\news\avator2.png" />
+    <Content Include="constra\images\news\avator3.png" />
+    <Content Include="constra\images\news\news1.jpg" />
+    <Content Include="constra\images\news\news2.jpg" />
+    <Content Include="constra\images\news\news3.jpg" />
+    <Content Include="constra\images\parallax1.jpg" />
+    <Content Include="constra\images\projects\parallax1.jpg" />
+    <Content Include="constra\images\projects\project1.jpg" />
+    <Content Include="constra\images\projects\project2.jpg" />
+    <Content Include="constra\images\projects\project3.jpg" />
+    <Content Include="constra\images\projects\project4.jpg" />
+    <Content Include="constra\images\projects\project5.jpg" />
+    <Content Include="constra\images\projects\project6.jpg" />
+    <Content Include="constra\images\services\service-center.jpg" />
+    <Content Include="constra\images\services\service1.jpg" />
+    <Content Include="constra\images\services\service2.jpg" />
+    <Content Include="constra\images\services\service3.jpg" />
+    <Content Include="constra\images\services\service4.jpg" />
+    <Content Include="constra\images\services\service5.jpg" />
+    <Content Include="constra\images\services\service6.jpg" />
+    <Content Include="constra\images\slider-main\bg1.jpg" />
+    <Content Include="constra\images\slider-main\bg2.jpg" />
+    <Content Include="constra\images\slider-main\bg3.jpg" />
+    <Content Include="constra\images\slider-main\bg4.jpg" />
+    <Content Include="constra\images\slider-main\bg5.jpg" />
+    <Content Include="constra\images\slider-pages\slide-page1.jpg" />
+    <Content Include="constra\images\slider-pages\slide-page2.jpg" />
+    <Content Include="constra\images\slider-pages\slide-page3.jpg" />
+    <Content Include="constra\images\team\team1.jpg" />
+    <Content Include="constra\images\team\team2.jpg" />
+    <Content Include="constra\images\team\team3.jpg" />
+    <Content Include="constra\images\team\team4.jpg" />
+    <Content Include="constra\images\team\team5.jpg" />
+    <Content Include="constra\images\team\team6.jpg" />
+    <Content Include="constra\index-2.html" />
+    <Content Include="constra\index.html" />
+    <Content Include="constra\js\script.js" />
+    <Content Include="constra\news-left-sidebar.html" />
+    <Content Include="constra\news-right-sidebar.html" />
+    <Content Include="constra\news-single.html" />
+    <Content Include="constra\plugins\animate-css\animate.css" />
+    <Content Include="constra\plugins\bootstrap\bootstrap.min.css" />
+    <Content Include="constra\plugins\bootstrap\bootstrap.min.js" />
+    <Content Include="constra\plugins\colorbox\colorbox.css" />
+    <Content Include="constra\plugins\colorbox\controls.png" />
+    <Content Include="constra\plugins\colorbox\jquery.colorbox.js" />
+    <Content Include="constra\plugins\fontawesome\css\all.css" />
+    <Content Include="constra\plugins\fontawesome\css\all.min.css" />
+    <Content Include="constra\plugins\fontawesome\webfonts\fa-brands-400.svg" />
+    <Content Include="constra\plugins\fontawesome\webfonts\fa-regular-400.svg" />
+    <Content Include="constra\plugins\fontawesome\webfonts\fa-solid-900.svg" />
+    <Content Include="constra\plugins\google-map\map.js" />
+    <Content Include="constra\plugins\jQuery\jquery.min.js" />
+    <Content Include="constra\plugins\shuffle\shuffle.min.js" />
+    <Content Include="constra\plugins\slick\ajax-loader.gif" />
+    <Content Include="constra\plugins\slick\fonts\slick.svg" />
+    <Content Include="constra\plugins\slick\slick-animation.min.js" />
+    <Content Include="constra\plugins\slick\slick-theme.css" />
+    <Content Include="constra\plugins\slick\slick.css" />
+    <Content Include="constra\plugins\slick\slick.min.js" />
+    <Content Include="constra\pricing.html" />
+    <Content Include="constra\projects-single.html" />
+    <Content Include="constra\projects.html" />
+    <Content Include="constra\service-single.html" />
+    <Content Include="constra\services.html" />
+    <Content Include="constra\team.html" />
+    <Content Include="constra\testimonials.html" />
+    <Content Include="constra\typography.html" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="resim\a.jpeg" />
+    <Content Include="resim\a1.jpeg" />
+    <Content Include="resim\a2.jpeg" />
+    <Content Include="resim\a3.jpeg" />
+    <Content Include="resim\a4.jpeg" />
+    <Content Include="resim\b.jpeg" />
+    <Content Include="resim\c.jpeg" />
+    <Content Include="resim\d.jpeg" />
+    <Content Include="resim\e.jpeg" />
+    <Content Include="resim\f.jpeg" />
+    <Content Include="resim\fn1.jpeg" />
+    <Content Include="resim\fn2.jpeg" />
+    <Content Include="resim\fn3.jpeg" />
+    <Content Include="resim\fn4.jpeg" />
+    <Content Include="resim\g.jpeg" />
+    <Content Include="resim\h.jpeg" />
+    <Content Include="resim\i.jpeg" />
+    <Content Include="resim\j.jpeg" />
+    <Content Include="resim\k.jpeg" />
+    <Content Include="resim\l.jpeg" />
+    <Content Include="resim\m.jpeg" />
+    <Content Include="resim\n.jpeg" />
+    <Content Include="resim\o.jpeg" />
+    <Content Include="resim\p.jpeg" />
+    <Content Include="resim\q.jpeg" />
+    <Content Include="resim\r.jpeg" />
+    <Content Include="resim\r1.jpeg" />
+    <Content Include="resim\r2.jpeg" />
+    <Content Include="resim\r3.jpeg" />
+    <Content Include="resim\r4.jpeg" />
+    <Content Include="resim\r5.jpeg" />
+    <Content Include="resim\r6.jpeg" />
+    <Content Include="resim\s.jpeg" />
+    <Content Include="resim\s1.jpeg" />
+    <Content Include="resim\s2.jpeg" />
+    <Content Include="resim\s3.jpeg" />
+    <Content Include="resim\s4.jpeg" />
+    <Content Include="resim\s5.jpeg" />
+    <Content Include="resim\t.jpeg" />
+    <Content Include="resim\u.jpeg" />
+    <Content Include="resim\v.jpeg" />
+    <Content Include="resim\w.jpeg" />
+    <Content Include="resim\x.jpeg" />
+    <Content Include="resim\y.jpeg" />
+    <Content Include="resim\y1.jpeg" />
+    <Content Include="resim\y2.jpeg" />
+    <Content Include="resim\y3.jpeg" />
+    <Content Include="resim\z.jpeg" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="constra\css\maps\style.css.map" />
+    <Content Include="constra\plugins\fontawesome\webfonts\fa-brands-400.eot" />
+    <Content Include="constra\plugins\fontawesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="constra\plugins\fontawesome\webfonts\fa-brands-400.woff" />
+    <Content Include="constra\plugins\fontawesome\webfonts\fa-brands-400.woff2" />
+    <Content Include="constra\plugins\fontawesome\webfonts\fa-regular-400.eot" />
+    <Content Include="constra\plugins\fontawesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="constra\plugins\fontawesome\webfonts\fa-regular-400.woff" />
+    <Content Include="constra\plugins\fontawesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="constra\plugins\fontawesome\webfonts\fa-solid-900.eot" />
+    <Content Include="constra\plugins\fontawesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="constra\plugins\fontawesome\webfonts\fa-solid-900.woff" />
+    <Content Include="constra\plugins\fontawesome\webfonts\fa-solid-900.woff2" />
+    <Content Include="constra\plugins\slick\fonts\slick.eot" />
+    <Content Include="constra\plugins\slick\fonts\slick.ttf" />
+    <Content Include="constra\plugins\slick\fonts\slick.woff" />
+    <Content Include="constra\plugins\slick\README.markdown" />
+    <Content Include="constra\scss\style.scss" />
+    <Content Include="constra\scss\templates\_main.scss" />
+    <Content Include="constra\scss\templates\_navigation.scss" />
+    <Content Include="constra\scss\_buttons.scss" />
+    <Content Include="constra\scss\_common.scss" />
+    <Content Include="constra\scss\_mixins.scss" />
+    <Content Include="constra\scss\_typography.scss" />
+    <Content Include="constra\scss\_variables.scss" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_AnaLayout.cshtml" />
+    <Content Include="Views\Ana\Index.cshtml" />
+    <Content Include="Views\Slider\AnaSlider.cshtml" />
+    <Content Include="Views\About\AboutIndex.cshtml" />
+    <Content Include="Views\Ana\Footer.cshtml" />
+    <Content Include="Views\Project\ProjectIndex.cshtml" />
+    <Content Include="Views\Services\ServicesIndex.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Ana\TopBar.cshtml" />
+    <Content Include="Views\Services\ServicesDetails.cshtml" />
+    <Content Include="Views\Services\ServicesTitleList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{a78a4ace-9711-4141-bade-bf19ff1f7f8c}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccesLayer\DataAccesLayer.csproj">
+      <Project>{d6ef0d4b-ad93-4294-905a-c2ab715eba91}</Project>
+      <Name>DataAccesLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityLayer\EntityLayer.csproj">
+      <Project>{f7216a14-da0f-48f2-bc93-5945506492a8}</Project>
+      <Name>EntityLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53738</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44375/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
